@@ -1,7 +1,7 @@
 // This directory contains general utilities that you can use as helper functions throughout other scripts
 // Coin flip functions
-module.exprts = {
-coinFlip: () => {
+module.exports = {
+  coinFlip: () => {
     let flip = Math.random();
     let result = "";
     if (flip < 0.5) {
@@ -11,7 +11,7 @@ coinFlip: () => {
     }
     return result;
   },
-  
+
   coinFlips: (flips) => {
     var arr = [];
     for (let x = 0; x < flips; x++) {
@@ -20,7 +20,7 @@ coinFlip: () => {
     }
     return arr;
   },
-  
+
   countFlips: (array) => {
     let heads = 0;
     let tails = 0;
@@ -46,7 +46,7 @@ coinFlip: () => {
       return counterTails;
     }
   },
-  
+
   flipACoin: (call) => {
     if (call == null || call == "") {
       throw "Error: no input";
@@ -65,6 +65,5 @@ coinFlip: () => {
       return info;
     }
     throw "Usage: node guess-flip --call=[heads|tails]";
-  }
-}
-  
+  },
+};
