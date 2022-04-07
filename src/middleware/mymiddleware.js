@@ -1,19 +1,4 @@
 // Middleware function definitions go here
-
-const morgan = require("morgan");
-const fs = require("fs");
-// Use morgan for logging to files
-// Create a write stream to append to an access.log file
-// Set up the access logging middleware
-const logging = (req, res, next) => {
-  // Use morgan for logging to files
-  // Create a write stream to append to an access.log file
-  const accessLog = fs.createWriteStream("./data/log/access.log", { flags: "a" });
-  // Set up the access logging middleware
-  morgan("combined", { stream: accessLog });
-  next();
-};
-
 const db = require("../services/database");
 
 const database = (req, res, next) => {
@@ -55,4 +40,4 @@ const notFound = (req, res, next) => {
   next();
 };
 
-module.exports = { logging, database, notFound };
+module.exports = { database, notFound };

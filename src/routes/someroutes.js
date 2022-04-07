@@ -8,8 +8,6 @@ const middleware = require('../middleware/mymiddleware')
 
 router.use(middleware.database)
 
-router.use(middleware.logging)
-
 router.get('/app', controller.root)
 
 router.get('/app/log/access/', controller.log)
