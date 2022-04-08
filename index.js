@@ -31,6 +31,7 @@ const fs = require("fs");
 const accessLog = fs.createWriteStream("./data/log/access.log", { flags: "a" });
 app.use(morgan("combined", { stream: accessLog }));
 
+app.use(express.static('./public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", routes);

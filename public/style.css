@@ -3,7 +3,8 @@ div.hidden {
 }
 
 div.active {
-  border: 5px solid red;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 img.bigcoin {
@@ -12,4 +13,32 @@ img.bigcoin {
 
 img.smallcoin {
   width: 50px;
+}
+
+h1.title {
+  padding-top: 70px;
+  text-align: center;
+}
+
+form {
+  padding-top: 70px;
+  text-align: center;
+}
+
+p {
+  padding-top: 70px;
+}
+
+nav {
+  position: absolute;
+  left: 0px;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+table.middle {
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
