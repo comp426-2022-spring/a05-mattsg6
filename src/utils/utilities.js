@@ -15,7 +15,7 @@ module.exports = {
   coinFlips: (flips) => {
     var arr = [];
     for (let x = 0; x < flips; x++) {
-      let coin = coinFlip();
+      let coin = module.exports.coinFlip();
       arr.push(coin);
     }
     return arr;
@@ -53,7 +53,7 @@ module.exports = {
     }
     if (call == "heads" || call == "tails") {
       let info = { call: call, flip: "", result: "" };
-      let coinF = coinFlip();
+      let coinF = module.exports.coinFlip();
       let result = "";
       if (call == coinF) {
         result = "win";

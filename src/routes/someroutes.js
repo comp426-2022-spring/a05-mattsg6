@@ -16,6 +16,10 @@ router.get('/app/error/', controller.error)
 
 router.get('/app/flip', controller.flip)
 
+router.get('/app/flips/:number', controller.flipNumber)
+
+router.get('/app/flip/call/:guess(tails|heads)', controller.callGuess)
+
 router.post('/app/flip/coins/', controller.flips)
 
 router.post('/app/flip/call/', controller.call)
