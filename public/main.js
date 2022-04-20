@@ -135,6 +135,7 @@ async function guessFlip(event) {
           .getElementById("quarter2")
           .setAttribute("src", "./assets/img/" + results.flip + ".png");
         document.getElementById("status").innerHTML = results.result;
+        document.getElementById("quarter3").setAttribute("src","./assets/img/" + rad.value + ".png")
       });
   } catch (e) {
     console.error(e);

@@ -258,19 +258,26 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/log/error
 ```
 
 #### Response body
 
 ```
-
+{ error: e }
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 10619
+ETag: W/"297b-FmYrfMsEiHTKIFOfDFPUUhS7Pr4"
+Date: Fri, 08 Apr 2022 13:09:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/user/login/ (POST)
@@ -280,19 +287,26 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --data "username=user&password=pass" http://localhost:5555/app/user/login/
 ```
 
 #### Response body
 
 ```
-
+{ token: token, user_id: id }
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 10619
+ETag: W/"297b-FmYrfMsEiHTKIFOfDFPUUhS7Pr4"
+Date: Fri, 08 Apr 2022 13:09:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/user/new/ (POST)
@@ -302,19 +316,26 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --data "email=email@email.com&username=user&password=pass" http://localhost:5555/app/user/new/
 ```
 
 #### Response body
 
 ```
-
+{ changes: 1, lastInsertId: 1 }
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 10619
+ETag: W/"297b-FmYrfMsEiHTKIFOfDFPUUhS7Pr4"
+Date: Fri, 08 Apr 2022 13:09:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/user/update/ (PATCH)
@@ -324,19 +345,26 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl -X PATCH http://localhost:5555/app/user/update/ -H "Content-Type: application/json" -d '{"username":"user","password":"pass","email":"email@email.com"}'
 ```
 
 #### Response body
 
 ```
-
+{ changes: 1 }
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 10619
+ETag: W/"297b-FmYrfMsEiHTKIFOfDFPUUhS7Pr4"
+Date: Fri, 08 Apr 2022 13:09:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/user/delete/ (DELETE)
@@ -346,17 +374,24 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl -X DELETE http://localhost:5555/app/user/delete/?username=user -H "Accept: application/json"
 ```
 
 #### Response body
 
 ```
-
+{ changes: 1 }
 ```
 
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 10619
+ETag: W/"297b-FmYrfMsEiHTKIFOfDFPUUhS7Pr4"
+Date: Fri, 08 Apr 2022 13:09:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
