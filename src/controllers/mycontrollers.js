@@ -1,5 +1,4 @@
-// The files in this directory contain functions that handle requests coming to different routes
-const db = require("../services/database");
+// The files in this directory contain functions that handle requests coming to different route
 
 const {
   coinFlip,
@@ -11,20 +10,6 @@ const {
 const root = (req, res) => {
   res.status(200);
   res.json({ message: "API works (200)" });
-};
-
-const log = (req, res) => {
-  try {
-    const stmt = db.prepare("SELECT * FROM accesslog").all();
-    res.status(200).json(stmt);
-  } catch (e) {
-    console.error(e);
-  }
-};
-
-const error = (req, res) => {
-  res.status(500);
-  res.end("Error test works.");
 };
 
 const flip = (req, res) => {
@@ -58,4 +43,4 @@ const callGuess = (req, res) => {
   res.status(200).json(game);
 };
 
-module.exports = { root, log, error, flip, flips, call, flipNumber, callGuess };
+module.exports = { root, flip, flips, call, flipNumber, callGuess };
