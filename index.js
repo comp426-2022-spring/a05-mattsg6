@@ -47,7 +47,7 @@ if (debug) {
 const morgan = require("morgan");
 const fs = require("fs");
 if (log) {
-  const accessLog = fs.createWriteStream("./data/log/access.log", {
+  const accessLog = fs.createWriteStream("./log/access.log", {
     flags: "a",
   });
   app.use(morgan("combined", { stream: accessLog }));
